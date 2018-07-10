@@ -1,0 +1,31 @@
+
+.nav {
+  padding-top: 17px;
+  width: 100%;
+  display: flex;
+}
+
+.navItem {
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  list-style: none;
+  flex: 1;
+}
+
+form a {
+  margin-left: 10px;
+}
+
+a {
+  color: black;
+}
+
+textarea, input {
+  width: 100%;
+  resize: none;
+}
+
+.error {
+  color: red;
+}
