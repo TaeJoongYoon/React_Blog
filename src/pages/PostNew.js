@@ -16,10 +16,6 @@ class PostNew extends Component {
     router: PropTypes.object
   };
  
-  constructor(props, context) {
-    super(props, context);
-  }
-
   onSubmit = (props) => {
     this.props.createPost(props)
               .then(() => {

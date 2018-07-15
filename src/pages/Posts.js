@@ -2,18 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import _ from 'lodash';
 import { fetchPosts } from "../actions/index";
 
 class Posts extends Component {
-  constructor(props) {
-    super(props);
-  }
+  
   componentDidMount() {
     this.props.fetchPosts();
   }
 
   renderPosts = () => {
-    return this.props.posts.map(post => {
+    return _.map(this.props.posts, post => {
       return (
         <Link to={`${this.props.match.url}/${post.id}`}>
           <li className="list-group-item" key={post.id}>
@@ -37,7 +36,7 @@ class Posts extends Component {
 }
 
 const mapStateTopProps = state => {
-  return { posts: state.posts.all };
+  return { posts: state.posts };
 };
 
 const mapDispatchToProps = dispatch => {

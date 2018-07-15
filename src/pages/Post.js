@@ -9,10 +9,6 @@ class Post extends Component {
     router: PropTypes.object
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.fetchPost(this.props.match.params.id);
   }
@@ -25,7 +21,7 @@ class Post extends Component {
 
   render() {
     const { post } = this.props;
-
+    
     if (!post) {
       return <div>Loading...</div>;
     }
@@ -46,8 +42,8 @@ class Post extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return { post: state.posts.post };
+const mapStateToProps = (state, ownProps) => {
+  return { post: state.posts[ownProps.match.params.id] };
 };
 
 const mapDispatchToProps = dispatch => {

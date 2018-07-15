@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Home, Posts, NoMatch, NewPost, Post } from './pages';
+import { Home, Posts, NoMatch, NewPost, Post } from './pages/index.async';
 import Menu from './components/Menu';
 
 import '../src/styles/style.css';
@@ -8,7 +8,7 @@ import '../src/styles/style.css';
 export default class App extends Component {
   render() {
     return (
-        <div className="App container">
+        <div className="container">
           <Menu />
           <Switch>
             <Route exact path="/" component={Home}/>
