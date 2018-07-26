@@ -1,4 +1,4 @@
-# React_BLog
+# React_Blog
 This project is about React & Redux.
 
 All code is what I studied and Using API http://reduxblog.herokuapp.com/
